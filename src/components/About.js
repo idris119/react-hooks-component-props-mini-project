@@ -1,9 +1,10 @@
-function About(props){
+import React from "react";
+function About({about , image="https://via.placeholder.com/215" }){
     return(
         <div>
             <aside>
-                <img src = {props.picUrl}/>
-                <p>{props.txt}</p>
+                <img src = {image} alt ="blog logo"/>
+                <p>{about}</p>
             </aside>
         </div>
     );

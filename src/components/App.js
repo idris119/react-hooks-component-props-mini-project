@@ -2,19 +2,23 @@ import React from "react";
 import blogData from "../data/blog";
 import Header from "./Header";
 import About from "./About";
+import Article from "./Article";
+import ArticleList from "./ArticleList";
 
 console.log(blogData);
 
 function App() {
-  const picUrl = "https://via.placeholder.com/215Links to an external site."
-  const text ="blog log"
-  const txt ="about"
+ 
   return (
     <div>
-      <Header name ="overreacted"/>
-      <About img src={picUrl} alt = {text}
-       txt ="about"/>
+      <Header name ={blogData.name}/>
+      <About image= {blogData.image} about={blogData.about} />
+      <ArticleList posts={blogData.posts}/>
+      <Article/>
     </div>
+    
+     
+  
   );
 }
 

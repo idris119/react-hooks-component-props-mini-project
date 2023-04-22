@@ -1,10 +1,16 @@
-import blogData from "../data/blog";
-function Article(props){
-    <article>
-        
-        <h3>{props.title}</h3>
-        <small>{props.date}</small>
-        <p>{props.preview}</p>
-    </article>
+import React from "react";
+
+function Article(title,date ="january 1 ,1970",preview,minutes){
+    return(
+
+    <div>
+        <article>
+         <h3>{title}</h3>
+        <small>{date}</small>
+        <small>{minutes}mins read</small>
+        <p>{preview}</p>
+        </article>
+    </div>
+)
 }
 export default Article;
